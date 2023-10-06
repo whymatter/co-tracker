@@ -1,5 +1,19 @@
 # CoTracker: It is Better to Track Together
 
+## >> CHANGES IN THIS FORK <<
+
+* Added support for streaming of frames into CoTracker (`live.py`, `predictor_live.py`, `cotracker_live.py`)
+* Limitations
+  * No support for other checkpoints (stride + window are a bit hardcoded)
+  * No support for dynamically changing queries
+  * Didn't implement the `queries is None and grid_size == 0` case
+* Usage
+  ```python
+  python live.py --grid_size=10 --capture_device=0
+  ```
+
+## Original Readme
+
 **[Meta AI Research, GenAI](https://ai.facebook.com/research/)**; **[University of Oxford, VGG](https://www.robots.ox.ac.uk/~vgg/)**
 
 [Nikita Karaev](https://nikitakaraevv.github.io/), [Ignacio Rocco](https://www.irocco.info/), [Benjamin Graham](https://ai.facebook.com/people/benjamin-graham/), [Natalia Neverova](https://nneverova.github.io/), [Andrea Vedaldi](https://www.robots.ox.ac.uk/~vedaldi/), [Christian Rupprecht](https://chrirupp.github.io/)
